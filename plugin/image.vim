@@ -41,6 +41,8 @@ def getAsciiImage(imageFile, maxWidth, maxHeight):
     pixels = img.load()
 
     colorPalette = '"@%#*+=-:.'
+    # Inverse the color palette because I think it looks better
+    colorPalette = colorPalette[::-1]
     lencolor = len(colorPalette)
 
     # Delete the current buffer so that we dont overwrite the real image file
